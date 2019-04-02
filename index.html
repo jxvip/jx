@@ -27,7 +27,7 @@ function GetQueryString(name)
      var r = window.location.search.substr(1).match(reg);
      if(r!=null)return  unescape(r[2]); return null;
 }
-    var vpurl = GetQueryString("url");
+    var vid = GetQueryString("url");
 	var index = vid.indexOf("https://");
 	if(index == 0&&document.location.protocol=="http:"){
 		document.location.protocol="https:";
@@ -45,7 +45,7 @@ function GetQueryString(name)
                 quality:[{
                     type:'hls',
                     name:'高清',
-                    url:'+vpurl+'
+                    url:'+vid+'
                 }],
                 defaultQuality:0
             }
